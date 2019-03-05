@@ -5,5 +5,13 @@
     <string name="message_error_unknown">Something went wrong</string>
     <string name="message_connection_error">Your connection seems lost</string>
     <string name="message_connect_internet">Connect to the internet</string>
+    <string name="text_order_this">Order this</string>
+    <string name="text_pizza_price">%.2f $</string>
+    <string name="title_menu">Menu</string>
+    <string name="text_order_customized_pizza">Order customized pizza</string>
+    <string name="text_confirm_selection">Confirm selection</string>
+    <string name="title_create_customize_pizza">Create customize pizza</string>
+    <string name="text_already_have_two_flavors">You already selected two flavors</string>
+    <string name="text_your_selection">Your selection:</string>
 
 </resources>

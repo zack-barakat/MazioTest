@@ -6,7 +6,7 @@ import com.android.maziotest.ui.base.BaseView
 interface SplashContracts {
 
     interface View : BaseView {
-        fun showMainScreen()
+        fun showMenuScreen()
     }
 
     interface Presenter<V : View> : BasePresenter<V>

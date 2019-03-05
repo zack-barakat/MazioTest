@@ -4,6 +4,8 @@ import android.os.Bundle
 import com.android.maziotest.R
 import com.android.maziotest.ui.base.BaseMvpActivity
 import com.android.maziotest.ui.base.BasePresenter
+import com.android.maziotest.ui.menu.MenuActivity
+import org.jetbrains.anko.startActivity
 import javax.inject.Inject
 
 class SplashActivity : BaseMvpActivity(), SplashContracts.View {
@@ -31,7 +33,7 @@ class SplashActivity : BaseMvpActivity(), SplashContracts.View {
         return mPresenter
     }
 
-    override fun showMainScreen() {
-
+    override fun showMenuScreen() {
+        startActivity<MenuActivity>()
     }
 }

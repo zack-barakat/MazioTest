@@ -16,9 +16,9 @@ constructor(dataManager: IDataManager) : BaseMvpPresenter<SplashContracts.View>(
         val disposable = Observable.just("")
             .delay(2000, TimeUnit.MILLISECONDS, AndroidSchedulers.mainThread())
             .subscribe({
-                getView().showMainScreen()
+                getView().showMenuScreen()
             }, {
-                getView().showMainScreen()
+                getView().showMenuScreen()
             })
         addToSubscription(disposable)
     }
