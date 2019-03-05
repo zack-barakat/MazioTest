@@ -5,6 +5,8 @@ import com.android.maziotest.data.AppErrorHelper;
 import com.android.maziotest.data.DataManager;
 import com.android.maziotest.data.IAppErrorHelper;
 import com.android.maziotest.data.IDataManager;
+import com.android.maziotest.data.repositories.IPizzaRepository;
+import com.android.maziotest.data.repositories.PizzaRepository;
 import com.android.maziotest.di.scopes.ApplicationScope;
 import dagger.Module;
 import dagger.Provides;
@@ -26,5 +28,11 @@ public class DataManagerModule {
     @ApplicationScope
     public IAppErrorHelper provideErrorHelper(AppErrorHelper errorHelper) {
         return errorHelper;
+    }
+
+    @Provides
+    @ApplicationScope
+    public IPizzaRepository providePizzaRepository(PizzaRepository pizzaRepository) {
+        return pizzaRepository;
     }
 }
