@@ -13,4 +13,5 @@
     <color name="iconsLight">#27384c</color>
     <color name="divider">#BDBDBD</color>
     <color name="colorShadow">#7FC0C0C0</color>
+    <color name="colorBackgroundGrey">#C0BEBE</color>
 </resources>

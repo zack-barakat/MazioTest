@@ -13,5 +13,8 @@
     <string name="title_create_customize_pizza">Create customize pizza</string>
     <string name="text_already_have_two_flavors">You already selected two flavors</string>
     <string name="text_your_selection">Your selection:</string>
+    <string name="text_order_summary">Order Sumary</string>
+    <string name="text_go_to_pizzas_menu">Go to pizzas menu</string>
+    <string name="title_order_summary">Order Summary</string>
 
 </resources>

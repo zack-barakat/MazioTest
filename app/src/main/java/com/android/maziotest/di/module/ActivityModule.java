@@ -7,6 +7,8 @@ import com.android.maziotest.ui.custompizza.CustomPizzaContracts;
 import com.android.maziotest.ui.custompizza.CustomPizzaPresenter;
 import com.android.maziotest.ui.menu.MenuContracts;
 import com.android.maziotest.ui.menu.MenuPresenter;
+import com.android.maziotest.ui.ordersummary.OrderSummaryContracts;
+import com.android.maziotest.ui.ordersummary.OrderSummaryPresenter;
 import com.android.maziotest.ui.splash.SplashContracts;
 import com.android.maziotest.ui.splash.SplashPresenter;
 import dagger.Module;
@@ -45,5 +47,10 @@ public class ActivityModule {
     @Provides
     CustomPizzaContracts.Presenter<CustomPizzaContracts.View> provideCustomPizzaPresenter(CustomPizzaPresenter customPizzaPresenter) {
         return customPizzaPresenter;
+    }
+
+    @Provides
+    OrderSummaryContracts.Presenter<OrderSummaryContracts.View> provideOrderSummaryPresenter(OrderSummaryPresenter orderSummaryPresenter) {
+        return orderSummaryPresenter;
     }
 }

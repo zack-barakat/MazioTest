@@ -60,7 +60,7 @@ constructor(dataManager: IDataManager) : BaseMvpPresenter<CustomPizzaContracts.V
 
     override fun onConfirmSelection() {
         val customizedPizza = getCustomPizzaSelection()
-        mPizzaRepository.selectPizza(customizedPizza)
+        mPizzaRepository.orderPizza(customizedPizza)
         view.openConfirmationScreen()
     }
 

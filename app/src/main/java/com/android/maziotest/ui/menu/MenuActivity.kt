@@ -7,6 +7,7 @@ import com.android.maziotest.data.model.Pizza
 import com.android.maziotest.ui.base.BaseMvpActivity
 import com.android.maziotest.ui.base.BasePresenter
 import com.android.maziotest.ui.custompizza.CustomPizzaActivity
+import com.android.maziotest.ui.ordersummary.OrderSummaryActivity
 import kotlinx.android.synthetic.main.activity_menu.*
 import org.jetbrains.anko.startActivity
 import javax.inject.Inject
@@ -58,6 +59,6 @@ class MenuActivity : BaseMvpActivity(), MenuContracts.View {
     }
 
     override fun openConfirmationScreen() {
-
+        startActivity<OrderSummaryActivity>()
     }
 }

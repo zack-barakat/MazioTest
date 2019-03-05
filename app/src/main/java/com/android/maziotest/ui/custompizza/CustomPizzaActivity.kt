@@ -6,8 +6,10 @@ import com.android.maziotest.R
 import com.android.maziotest.data.model.PizzaSelection
 import com.android.maziotest.ui.base.BaseMvpActivity
 import com.android.maziotest.ui.base.BasePresenter
+import com.android.maziotest.ui.ordersummary.OrderSummaryActivity
 import com.android.maziotest.utils.DialogHelper
 import kotlinx.android.synthetic.main.activity_custom_pizza.*
+import org.jetbrains.anko.startActivity
 import javax.inject.Inject
 
 class CustomPizzaActivity : BaseMvpActivity(), CustomPizzaContracts.View {
@@ -34,6 +36,7 @@ class CustomPizzaActivity : BaseMvpActivity(), CustomPizzaContracts.View {
 
     private fun setupLayout() {
         supportActionBar?.title = getString(R.string.title_create_customize_pizza)
+        btnConfirmSelection.setOnClickListener { mPresenter.onConfirmSelection() }
         setupPricesRecyclerView()
     }
 
@@ -57,7 +60,7 @@ class CustomPizzaActivity : BaseMvpActivity(), CustomPizzaContracts.View {
     }
 
     override fun openConfirmationScreen() {
-
+        startActivity<OrderSummaryActivity>()
     }
 
     override fun showAlreadySelectedTwoPizzasMessage() {

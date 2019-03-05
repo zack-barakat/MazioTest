@@ -6,6 +6,7 @@ import com.android.maziotest.di.scopes.ActivityScope;
 import com.android.maziotest.ui.base.BaseMvpActivity;
 import com.android.maziotest.ui.custompizza.CustomPizzaActivity;
 import com.android.maziotest.ui.menu.MenuActivity;
+import com.android.maziotest.ui.ordersummary.OrderSummaryActivity;
 import com.android.maziotest.ui.splash.SplashActivity;
 import dagger.Component;
 
@@ -21,5 +22,7 @@ public interface ActivityComponent {
     void inject(MenuActivity activity);
 
     void inject(CustomPizzaActivity activity);
+
+    void inject(OrderSummaryActivity activity);
 
 }

@@ -31,6 +31,10 @@
         <activity
             android:name=".ui.custompizza.CustomPizzaActivity"
             android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".ui.ordersummary.OrderSummaryActivity"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

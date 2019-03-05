@@ -12,13 +12,15 @@ interface IPizzaRepository {
 
     fun getCustomizedFlavourPizza(firstHalf: Pizza, secondHalf: Pizza): Pizza
 
-    fun selectPizza(pizza: Pizza)
+    fun orderPizza(pizza: Pizza)
+
+    fun getOrderedPizza(): Pizza?
 }
 
 @ApplicationScope
 open class PizzaRepository @Inject constructor(private val apiHelper: IApiHelper) : IPizzaRepository {
 
-    private var mSelectedPizza: Pizza? = null
+    private var mOrderedPizza: Pizza? = null
     private var mPizzas: ArrayList<Pizza>? = null
 
     /**
@@ -50,7 +52,15 @@ open class PizzaRepository @Inject constructor(private val apiHelper: IApiHelper
     /**
      * @param pizza: selected pizza to order
      */
-    override fun selectPizza(pizza: Pizza) {
-        mSelectedPizza = pizza
+    override fun orderPizza(pizza: Pizza) {
+        mOrderedPizza = pizza
     }
+
+    /**
+     * @return pizza: ordered pizza
+     */
+    override fun getOrderedPizza(): Pizza? {
+        return mOrderedPizza
+    }
+
 }

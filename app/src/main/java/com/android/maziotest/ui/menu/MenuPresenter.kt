@@ -19,7 +19,7 @@ constructor(dataManager: IDataManager) : BaseMvpPresenter<MenuContracts.View>(da
 
     override fun onSelectPizzaClick(position: Int) {
         val pizza = mPizzas[position]
-        mPizzaRepository.selectPizza(mPizzas[position])
+        mPizzaRepository.orderPizza(mPizzas[position])
         view.openConfirmationScreen()
     }
 
